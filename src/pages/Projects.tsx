@@ -10,7 +10,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="pb-52 flex justify-center text-center flex-col max-w-6xl mx-auto ">
+    <div className="pb-52 mt-24 lg:mt-0 flex justify-center text-center flex-col max-w-6xl mx-auto ">
       <div className="">
         <BlurText
           text="PROJECTS"
