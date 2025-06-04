@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /*
 	Installed from https://reactbits.dev/ts/tailwind/
 */
@@ -7,9 +8,9 @@ import React, {
   cloneElement,
   forwardRef,
   isValidElement,
-  ReactElement,
-  ReactNode,
-  RefObject,
+  type ReactElement,
+  type ReactNode,
+  type RefObject,
   useEffect,
   useMemo,
   useRef,
@@ -44,7 +45,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
 );
 Card.displayName = "Card";
 
-type CardRef = RefObject<HTMLDivElement>;
+type CardRef = RefObject<HTMLDivElement | null>;
 interface Slot {
   x: number;
   y: number;
@@ -122,7 +123,7 @@ const CardSwap: React.FC<CardSwapProps> = ({
   );
 
   const tlRef = useRef<gsap.core.Timeline | null>(null);
-  const intervalRef = useRef<number>();
+  const intervalRef = useRef<number>(0);
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
