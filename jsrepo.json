@@ -3,7 +3,6 @@
   "repos": [
     "https://reactbits.dev/ts/tailwind",
     "https://reactbits.dev/tailwind"
-
   ],
   "includeTests": false,
   "watermark": true,

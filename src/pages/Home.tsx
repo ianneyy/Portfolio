@@ -1,10 +1,12 @@
 import { HeroSection } from "../components/hero-section-2";
 import {Skills} from "../pages/Skills"
 import { Timeline } from "@/components/ui/timeline";
+import { useEffect } from "react";
 
 import { Footer } from "@/components/footer-section";
 import ClickSpark from '../components/blocks/Animations/ClickSpark/ClickSpark'
 import { Projects } from "./Projects";
+import SplineScreen from "@/SplineScene";
 export default function Home() {
   const data = [
     {
@@ -58,6 +60,17 @@ export default function Home() {
       ),
     },
   ];
+    useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src =
+      "https://unpkg.com/@splinetool/viewer@1.10.48/build/spline-viewer.js";
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   
   return (
     <ClickSpark
@@ -81,6 +94,13 @@ export default function Home() {
         <Projects />
       </section>
       <Footer />
+      {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.48/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/S3WnR8XJLJbPybfU/scene.splinecode"></spline-viewer> */}
+{/* <spline-viewer
+  url="https://prod.spline.design/S3WnR8XJLJbPybfU/scene.splinecode"
+  style={{ width: "100%", height: "500px", display: "block" }}
+/> */}
+    <SplineScreen/>
     </ClickSpark>
   );
 }
