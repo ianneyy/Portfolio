@@ -2,7 +2,7 @@
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import { FacebookIcon, FrameIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from 'lucide-react';
+import { FacebookIcon, FrameIcon, InstagramIcon,  Github } from 'lucide-react';
 
 interface FooterLink {
 	title: string;
@@ -26,31 +26,15 @@ const footerLinks: FooterSection[] = [
       { title: "Contact", href: "/" },
     ],
   },
-  {
-    label: "Company",
-    links: [
-      { title: "FAQs", href: "/faqs" },
-      { title: "About Us", href: "/about" },
-      { title: "Privacy Policy", href: "/privacy" },
-      { title: "Terms of Services", href: "/terms" },
-    ],
-  },
-  {
-    label: "Resources",
-    links: [
-      { title: "Blog", href: "/blog" },
-      { title: "Changelog", href: "/changelog" },
-      { title: "Brand", href: "/brand" },
-      { title: "Help", href: "/help" },
-    ],
-  },
+ 
+ 
   {
     label: "Social Links",
     links: [
-      { title: "Facebook", href: "#", icon: FacebookIcon },
-      { title: "Instagram", href: "#", icon: InstagramIcon },
-      { title: "Youtube", href: "#", icon: YoutubeIcon },
-      { title: "LinkedIn", href: "#", icon: LinkedinIcon },
+      { title: "Facebook", href: "https://www.facebook.com/r.iannnnn30", icon: FacebookIcon },
+      { title: "Instagram", href: "https://www.instagram.com/_iannn.x/", icon: InstagramIcon },
+      // { title: "LinkedIn", href: "#", icon: LinkedinIcon },
+      { title: "Github", href: "https://github.com/ianneyy/", icon: Github },
     ],
   },
 ];

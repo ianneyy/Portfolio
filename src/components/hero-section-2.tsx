@@ -95,17 +95,39 @@ export function HeroSection() {
                 delay={5000}
                 pauseOnHover={false}
               >
+               
                 <Card>
-                  <h3 className="ml-5">Card 1</h3>
-                  <p>Your content here</p>
+                  <h3 className="ml-5">User Experience Design Fundamentals</h3>
+                  <img src="/img/certificate/IBMDesign20250717-27-ithriq-1.png" alt="" className="w-full object-cover rounded-xl shadow-lg"/>
+                </Card>
+                 <Card>
+                  <h3 className="ml-5">Project Management Fundamentals</h3>
+                  <img src="/img/certificate/Project_Management_Fundamentals_Badge20240919-7-jn5jnr_page-0001.jpg" alt="" className="w-full  object-cover rounded-xl shadow-lg"/>
+                </Card>
+                 <Card>
+                  <h3 className="ml-5">Javascript Essential 1</h3>
+                  <img src="/img/certificate/Belarmino_Ian_JavaScript_Essentials_1_Certificate.jpg" alt="" className="w-full  object-cover rounded-xl shadow-lg"/>
+                </Card>
+
+                 <Card>
+                  <h3 className="ml-5">Network Device and Configuration</h3>
+                  <img src="/img/certificate/Belarmino_Ian_Network_Devices_and_Initial_Configuration.jpg" alt="" className="w-full  object-cover rounded-xl shadow-lg"/>
+                </Card>
+                 <Card>
+                  <h3 className="ml-5">Ethical Hacker</h3>
+                  <img src="/img/certificate/EthicalHackerUpdate20250717-25-lj35as-1.png" alt="" className="w-full  object-cover rounded-xl shadow-lg"/>
                 </Card>
                 <Card>
-                  <h3 className="ml-5">Card 2</h3>
-                  <p>Your content here</p>
+                  <h3 className="ml-5">Web Development Fundamentals</h3>
+                  <img src="/img/certificate/IBMDesign20250717-25-r6vvf5-1.png" alt="" className="w-full  object-cover rounded-xl shadow-lg"/>
                 </Card>
                 <Card>
-                  <h3 className="ml-5">Card 3</h3>
-                  <p>Your content here</p>
+                  <h3 className="ml-5">Agile Explorer</h3>
+                  <img src="/img/certificate/IBMDesign20250717-27-3la3gc-1.png" alt="" className="w-full  object-cover rounded-xl shadow-lg"/>
+                </Card>
+                 <Card>
+                  <h3 className="ml-5">Artificial Intelligence Fundamentals</h3>
+                  <img src="/img/certificate/IBMDesign20250717-27-5yc20d-1.png" alt="" className="w-full  object-cover rounded-xl shadow-lg"/>
                 </Card>
               </CardSwap>
             </div>
