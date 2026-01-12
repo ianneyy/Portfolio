@@ -93,14 +93,16 @@ export default function Home() {
       <section id="projects" className="scroll-mt-24 px-4 lg:py-0">
         <Projects />
       </section>
-      <Footer />
+      <section id="contact" className="scroll-mt-24 px-4 lg:py-0">
+        <Footer />
+      </section>
       {/* <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.48/build/spline-viewer.js"></script>
 <spline-viewer url="https://prod.spline.design/S3WnR8XJLJbPybfU/scene.splinecode"></spline-viewer> */}
-{/* <spline-viewer
+      {/* <spline-viewer
   url="https://prod.spline.design/S3WnR8XJLJbPybfU/scene.splinecode"
   style={{ width: "100%", height: "500px", display: "block" }}
 /> */}
-    <SplineScreen/>
+      <SplineScreen />
     </ClickSpark>
   );
 }

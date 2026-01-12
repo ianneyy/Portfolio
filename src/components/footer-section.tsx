@@ -23,7 +23,7 @@ const footerLinks: FooterSection[] = [
       { title: "About", href: "#pricing" },
       { title: "Skills", href: "#testimonials" },
       { title: "Projects", href: "#testimonials" },
-      { title: "Contact", href: "/" },
+      { title: "Contact", href: "#contact" },
     ],
   },
  
