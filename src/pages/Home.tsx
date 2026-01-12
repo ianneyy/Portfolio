@@ -1,10 +1,10 @@
 import { HeroSection } from "../components/hero-section-2";
-import {Skills} from "../pages/Skills"
+import { Skills } from "../pages/Skills";
 import { Timeline } from "@/components/ui/timeline";
 import { useEffect } from "react";
 
 import { Footer } from "@/components/footer-section";
-import ClickSpark from '../components/blocks/Animations/ClickSpark/ClickSpark'
+import ClickSpark from "../components/blocks/Animations/ClickSpark/ClickSpark";
 import { Projects } from "./Projects";
 import SplineScreen from "@/SplineScene";
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
       ),
     },
     {
-      title: "2023 - 1st Year College",
+      title: "2022 - 2023 1st Year College",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -34,7 +34,7 @@ export default function Home() {
       ),
     },
     {
-      title: "2024 - 2nd Year College",
+      title: "2023 - 2024 2nd Year College",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -46,7 +46,7 @@ export default function Home() {
       ),
     },
     {
-      title: "2025 - 3rd Year College (Present)",
+      title: "2024 - 2025 3rd Year College",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -59,8 +59,26 @@ export default function Home() {
         </div>
       ),
     },
+    {
+      title: "2025 - 2026 4th Year College (Present)",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Continued learning modern frameworks and tools such as React,
+            Laravel, Tailwind CSS, JavaScript libraries, and NoSQL databases.
+            During this year, I developed two major projects: a Supply Chain
+            Management System for a real client (Sunny & Scramble) and a Farm
+            Management System, both designed to streamline operations and
+            improve real-world workflows. These projects allowed me to apply my
+            knowledge in full-stack development and understand project
+            deployment, client requirements, and user experience in practical
+            scenarios.
+          </p>
+        </div>
+      ),
+    },
   ];
-    useEffect(() => {
+  useEffect(() => {
     const script = document.createElement("script");
     script.type = "module";
     script.src =
@@ -71,7 +89,7 @@ export default function Home() {
       document.body.removeChild(script);
     };
   }, []);
-  
+
   return (
     <ClickSpark
       sparkColor="#fff"
