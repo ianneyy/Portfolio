@@ -2,6 +2,7 @@ import { HeroSection } from "../components/hero-section-2";
 import { Skills } from "../pages/Skills";
 import { Timeline } from "@/components/ui/timeline";
 import { useEffect } from "react";
+import { CertificateSection } from "../components/certificate-section";
 
 import { Footer } from "@/components/footer-section";
 import ClickSpark from "../components/blocks/Animations/ClickSpark/ClickSpark";
@@ -107,6 +108,9 @@ export default function Home() {
       </section>
       <section id="skills" className="scroll-mt-24">
         <Skills />
+      </section>
+      <section id="certificate" className="scroll-mt-24 px-4 lg:py-0">
+        <CertificateSection />
       </section>
       <section id="projects" className="scroll-mt-24 px-4 lg:py-0">
         <Projects />

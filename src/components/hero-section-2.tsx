@@ -7,9 +7,7 @@ import { useScroll } from "motion/react";
 // import { p } from 'framer-motion/client';
 import { FaFacebook, FaGithub } from "react-icons/fa";
 
-import CardSwap, {
-  Card,
-} from "../components/blocks/Components/CardSwap/CardSwap";
+
 
 const transitionVariants = {
   item: {
@@ -89,78 +87,7 @@ export function HeroSection() {
             </AnimatedGroup>
           </div>
           <div className="relative h-[300px] sm:h-[300px] md:h-[500px]">
-            <CardSwap
-              cardDistance={60}
-              verticalDistance={70}
-              delay={5000}
-              pauseOnHover={false}
-            >
-              <Card>
-                <h3 className="ml-5">User Experience Design Fundamentals</h3>
-                <img
-                  src="/img/certificate/IBMDesign20250717-27-ithriq-1.png"
-                  alt=""
-                  className="w-full object-cover rounded-xl shadow-lg"
-                />
-              </Card>
-              <Card>
-                <h3 className="ml-5">Project Management Fundamentals</h3>
-                <img
-                  src="/img/certificate/Project_Management_Fundamentals_Badge20240919-7-jn5jnr_page-0001.jpg"
-                  alt=""
-                  className="w-full  object-cover rounded-xl shadow-lg"
-                />
-              </Card>
-              <Card>
-                <h3 className="ml-5">Javascript Essential 1</h3>
-                <img
-                  src="/img/certificate/Belarmino_Ian_JavaScript_Essentials_1_Certificate.jpg"
-                  alt=""
-                  className="w-full  object-cover rounded-xl shadow-lg"
-                />
-              </Card>
-
-              <Card>
-                <h3 className="ml-5">Network Device and Configuration</h3>
-                <img
-                  src="/img/certificate/Belarmino_Ian_Network_Devices_and_Initial_Configuration.jpg"
-                  alt=""
-                  className="w-full  object-cover rounded-xl shadow-lg"
-                />
-              </Card>
-              <Card>
-                <h3 className="ml-5">Ethical Hacker</h3>
-                <img
-                  src="/img/certificate/EthicalHackerUpdate20250717-25-lj35as-1.png"
-                  alt=""
-                  className="w-full  object-cover rounded-xl shadow-lg"
-                />
-              </Card>
-              <Card>
-                <h3 className="ml-5">Web Development Fundamentals</h3>
-                <img
-                  src="/img/certificate/IBMDesign20250717-25-r6vvf5-1.png"
-                  alt=""
-                  className="w-full  object-cover rounded-xl shadow-lg"
-                />
-              </Card>
-              <Card>
-                <h3 className="ml-5">Agile Explorer</h3>
-                <img
-                  src="/img/certificate/IBMDesign20250717-27-3la3gc-1.png"
-                  alt=""
-                  className="w-full  object-cover rounded-xl shadow-lg"
-                />
-              </Card>
-              <Card>
-                <h3 className="ml-5">Artificial Intelligence Fundamentals</h3>
-                <img
-                  src="/img/certificate/IBMDesign20250717-27-5yc20d-1.png"
-                  alt=""
-                  className="w-full  object-cover rounded-xl shadow-lg"
-                />
-              </Card>
-            </CardSwap>
+           
           </div>
         </section>
       </main>
@@ -172,6 +99,7 @@ const menuItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
+  { name: "Certificates", href: "#certificate" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
@@ -233,6 +161,7 @@ export const HeroHeader = () => {
                 </ul>
               </div>
             </div>
+            
 
             <div className="bg-background group-data-[state=active]:block lg:group-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
