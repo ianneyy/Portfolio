@@ -1,15 +1,17 @@
 import BlurText from "../components/blocks/TextAnimations/BlurText/BlurText";
+import {
+  CertificateCarousel,
+  type CertificateItem,
+} from "@/components/certificate-carousel";
+import { Button } from "@/components/ui/button";
 
-import { CardStack, type CardStackItem } from "@/components/card-stack";
-
-const items: CardStackItem[] = [
+const items: CertificateItem[] = [
   {
     id: 1,
-    title: "Project Management Fundamentals",
-    description: "IBM SkillsBuild · Issued Sep 2024",
-    imageSrc:
-      "/img/certificate/Project_Management_Fundamentals_Badge20240919-7-jn5jnr_page-0001.jpg",
-    href: "https://www.credly.com/go/L8u7oRAd",
+    title: "IT Specialist Java",
+    description: "Certiport · Issued May 2026",
+    imageSrc: "/img/certificate/java.png",
+    href: "https://www.credly.com/badges/dd2ecdec-c01f-4d0c-926f-0de23a7ed27d/public_url",
   },
   {
     id: 2,
@@ -37,8 +39,7 @@ const items: CardStackItem[] = [
     id: 5,
     title: "Agile Explorer",
     description: "IBM SkillsBuild · Issued Apr 2025",
-    imageSrc:
-      "/img/certificate/IBMDesign20250717-27-3la3gc-1.png",
+    imageSrc: "/img/certificate/IBMDesign20250717-27-3la3gc-1.png",
     href: "https://www.credly.com/badges/ec19c9c6-98ab-4375-b2d4-f6eb1da50acd",
   },
   {
@@ -63,14 +64,21 @@ const items: CardStackItem[] = [
     imageSrc: "/img/certificate/IBMDesign20250717-27-ithriq-1.png",
     href: "https://www.credly.com/badges/05f11b1e-ed2c-4ab8-91e8-142964f962c7",
   },
+  
+  {
+    id: 9,
+    title: "Project Management Fundamentals",
+    description: "IBM SkillsBuild · Issued Sep 2024",
+    imageSrc:
+      "/img/certificate/Project_Management_Fundamentals_Badge20240919-7-jn5jnr_page-0001.jpg",
+    href: "https://www.credly.com/go/L8u7oRAd",
+  },
 ];
-
-
 
 export const CertificateSection = () => {
   return (
     <section
-      className="py-16 px-4 bg-background/80 dark:bg-background/60 "
+      className="py-16 px-4 bg-background/80 dark:bg-background/60"
       id="certificates"
     >
       <div className="max-w-6xl mx-auto">
@@ -82,47 +90,26 @@ export const CertificateSection = () => {
             direction="top"
             className="text-4xl text-center flex justify-center"
           />
-          <p className="mt-2  text-center text-muted-foreground text-lg mb-10">
+          <p className="mt-2 text-center text-muted-foreground text-lg mb-10">
             A collection of certifications showcasing my skills and dedication
             to learning.
           </p>
         </div>
-        <div className="w-full ">
-          <div className="mx-auto w-full p-8 ">
-            <CardStack
-              items={items}
-              initialIndex={0}
-              autoAdvance
-              intervalMs={2000}
-              pauseOnHover
-              showDots
-            />
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <a
-            href="http://credly.com/users/ian-belarmino/badges#credly"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-7 py-2.5 rounded-xl text-sm text-neutral-500 font-semibold transition-colors shadow-md text-lg hover:text-blue-600"
-          >
-            View All Certificates
-          </a>
+
+        <CertificateCarousel items={items} className="px-8" />
+
+        <div className="mt-10 flex justify-center">
+          <Button variant="outline" size="lg" asChild>
+            <a
+              href="https://www.credly.com/users/ian-belarmino/badges"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View all certificates
+            </a>
+          </Button>
         </div>
       </div>
     </section>
   );
 };
-
-// Dynamically load Credly embed script
-if (typeof window !== "undefined") {
-  const scriptId = "credly-embed-script";
-  if (!document.getElementById(scriptId)) {
-                    
-    const script = document.createElement("script");
-    script.id = scriptId;
-    script.src = "https://cdn.credly.com/assets/utilities/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }
-}

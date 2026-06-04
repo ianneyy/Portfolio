@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { cn } from "@/lib/utils";
 import { useScroll } from "motion/react";
-// import { p } from 'framer-motion/client';
 import { FaFacebook, FaGithub } from "react-icons/fa";
+import profileImage from "@/assets/img/certificate/image.png";
 
 
 
@@ -34,8 +34,8 @@ export function HeroSection() {
     <>
       <HeroHeader />
       <main className="overflow-hidden">
-        <section className="flex flex-col lg:flex-row mt-24 lg:mt-0 items-center min-h-screen">
-          <div className="relative w-full px-4 lg:px-0 max-w-6xl mx-auto">
+        <section className="mt-24 flex min-h-screen items-center lg:mt-0">
+          <div className="relative mx-auto w-full max-w-6xl px-4 lg:px-0">
             <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--background)_75%)]"></div>
             {/* <div className="mx-auto max-w-5xl px-6">
                 <div className="sm:mx-auto lg:mr-auto"> */}
@@ -52,14 +52,27 @@ export function HeroSection() {
                 ...transitionVariants,
               }}
             >
-              <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16">
-                Ian Belarmino
-              </h1>
-              <p className="mt-8 max-w-2xl text-pretty text-lg">
-                I'm a student and full stack web developer with a passion for
-                building responsive, user-focused web applications. I specialize
-                in both front-end and back-end development.
-              </p>
+              <div className="mt-8 flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:gap-10 lg:mt-16">
+                <div className="relative shrink-0">
+                  <div className="size-36 overflow-hidden rounded-full border-4 border-white/15 shadow-xl ring-2 ring-primary/30 sm:size-44 md:size-52">
+                    <img
+                      src={profileImage}
+                      alt="Ian Belarmino"
+                      className="size-full object-cover object-[center_20%]"
+                    />
+                  </div>
+                </div>
+                <div className="min-w-0 flex-1 text-center sm:text-left">
+                  <h1 className="max-w-2xl text-balance text-5xl font-medium md:text-6xl">
+                    Ian Belarmino
+                  </h1>
+                  <p className="mt-6 max-w-2xl text-pretty text-lg sm:mt-8">
+                    A fresh graduate full stack web developer with a passion for
+                    building responsive, user-focused web applications. I
+                    specialize in both front-end and back-end development.
+                  </p>
+                </div>
+              </div>
               <div className="mt-12 flex items-center gap-3">
                 <div key={1}>
                   <a
@@ -86,9 +99,6 @@ export function HeroSection() {
               </div>
             </AnimatedGroup>
           </div>
-          <div className="relative h-[300px] sm:h-[300px] md:h-[500px]">
-           
-          </div>
         </section>
       </main>
     </>
@@ -97,7 +107,7 @@ export function HeroSection() {
 
 const menuItems = [
   { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
+  // { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Certificates", href: "#certificate" },
   { name: "Projects", href: "#projects" },
